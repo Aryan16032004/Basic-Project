@@ -1,4 +1,5 @@
 import React from 'react';
+import Design from './Design';
 
 
 function App() {
@@ -7,8 +8,8 @@ function App() {
   return (
    <div>
     <div className='py-11 bg-gradient-to-b from-[#FFFFFF00] to-[#F4F4F4] relative'>
-      <div className='w-[600px] flex flex-col items-center h-[250px] rounded-2xl bg-[#F4F4F4] absolute right-48'>
-        <p className='py-6 w-[150px] text-center font-bold text-[20px]'>Your Website, 
+      <div className='w-[600px] flex flex-col items-center h-[250px] rounded-2xl bg-[#F4F4F4] absolute right-48 pt-7 shadow-xl'>
+        <p className=' w-[150px] text-center font-bold text-[20px]'>Your Website, 
         Live in Minutes!</p>
         <p className='text-center w-[450px]'>Let our AI Website Builder revolutionize the way you create your site.
         With intelligent automation and design optimization, building 
@@ -33,6 +34,10 @@ function App() {
           <button className=' py-[20px] font-bold border-2 w-[140px] rounded-3xl border-b-4'>Go</button>
         </div>
       </div>
+    </div>
+
+    <div className='flex justify-center items-center'>
+      <Design/>
     </div>
    </div>
   )
