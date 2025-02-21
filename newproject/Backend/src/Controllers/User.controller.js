@@ -3,6 +3,7 @@ import { asyncHandler } from "../Utils/AsyncHandler.js";
 import { ApiResponse } from "../Utils/ApiResponse.js";
 import { User } from "../Models/UserModel.js";
 import mongoose from 'mongoose';
+import nodemailer from 'nodemailer';
 
 const generateAccessAndRefreshToken = async (userId) => {
     try {
@@ -136,9 +137,34 @@ const registerUser = asyncHandler(async (req, res) => {
        .json(new ApiResponse(200, {}, "User logged Out"))
  })
 
+ const sendEmail =asyncHandler(async(req,res)=>{
+     let testAccount=await nodemailer.createTestAccount();
+      
+     let transport=nodemailer.createTransport({
+          host:"smtp.ethereal.email",
+          port:587,
+          auth:{
+               user: 'toney21@ethereal.email',
+               pass: '2m82Ac1ASr2mMWTHm2'
+          }
+       });
+      
+      let info=await transport.sendMail({
+          from:"toney21@ethereal.email",
+            to:"badshaharyan1234@gmail.com",
+            subject:"Hello",
+            text:"Hello world",
+            html:"<b>Hello world</b>"
+      });
+      console.log("Message sent: %s",info.messageId);
+      res.send("Email sent")
+      
+ })
+
+
  export {registerUser,
     loginUser,
     logOutUser,
     getCurrentUser,
-    
+    sendEmail
 }

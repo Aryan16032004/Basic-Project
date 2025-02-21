@@ -28,7 +28,7 @@ function App() {
       <div className=' flex items-center gap-20 px-20'>
         <div className='flex border-2 w-5xl rounded-3xl border-b-4'>
         <p className='px-[50px] py-[20px] rounded-l-3xl bg-[#E1E1E1] text-[16px]'>Search</p>
-        <input className='text-[#6B7280] px-10' type="text" placeholder='Search your desire'/>
+        <input className='text-[#6B7280] px-10 w-2xl focus:outline-none' type="text" placeholder='Search your desire'/>
         </div>
         <div>
           <button className=' py-[20px] font-bold border-2 w-[140px] rounded-3xl border-b-4'>Go</button>

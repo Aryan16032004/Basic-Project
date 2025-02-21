@@ -8,7 +8,7 @@ function Header() {
         <h3 className='font-bold text-xl '>webirent</h3>
       </div>
       <div className=' text-[16px] flex gap-10 items-center '>
-        <h3>Product</h3>
+        <>Product</>
         <h3>Solution</h3>
         <h3>Resources</h3>
         <h3>Enterprise</h3>
